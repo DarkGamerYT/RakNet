@@ -5264,7 +5264,7 @@ bool ProcessOfflineNetworkPacket( SystemAddress systemAddress, const char *data,
 			// FALSE	  , FALSE	 , Allow connection
 
 			int outcome;
-			if (IPAddrInUse & GUIDInUse)
+			if (IPAddrInUse && GUIDInUse)
 			{
  				if (rssFromSA==rssFromGuid && rssFromSA->connectMode==RakPeer::RemoteSystemStruct::UNVERIFIED_SENDER)
 				{
